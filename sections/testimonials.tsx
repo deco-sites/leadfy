@@ -11,6 +11,10 @@ interface TestimonialProps {
 }
 
 interface Props {
+  /**
+   * @description The URL for the "Faça um teste grátis" button
+   */
+  buttonUrl?: string;
   title?: string;
   subtitle?: string;
   testimonials?: TestimonialProps[];
@@ -22,6 +26,14 @@ interface Props {
    * @format color-input
    */
   textColor?: string;
+  /**
+   * @format color-input
+   */
+  buttonColor?: string;
+  /**
+   * @format color-input
+   */
+  buttonTextColor?: string;
 }
 
 export default function TestimonialsSection({
@@ -54,7 +66,10 @@ export default function TestimonialsSection({
       company: "QuitCar Megastore",
       testimonial: "Hoje eu tenho leads muito mais qualificados e uma previsibilidade maior da demanda. Isso traz mais leveza na operação, porque não preciso de um gestor de tráfego e nem configurar nada"
     }
-  ]
+  ],
+  buttonUrl = "#",
+  buttonColor = "#EAB308",
+  buttonTextColor = "#000000"
 }: Props) {
   return (
     <section style={{ backgroundColor, color: textColor }} class="py-12 px-4">
@@ -73,9 +88,9 @@ export default function TestimonialsSection({
         </div>
       </div>
       <div class="mt-12 text-center">
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded">
+        <a href={buttonUrl} class="inline-block font-bold py-2 px-4 rounded transition-colors duration-300" style={{ backgroundColor: buttonColor, color: buttonTextColor, ":hover": { filter: "brightness(90%)" } }}>
           Faça um teste grátis
-        </button>
+        </a>
       </div>
     </section>
   );
