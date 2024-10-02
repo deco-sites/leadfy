@@ -58,13 +58,33 @@
         "dashboardImage": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/45850fbb-c575-4505-9303-ea1e4bda3cb4/Captura-de-tela-2024-10-01-152951.png",
         "trustText": "Grandes marcas que confiam na nossa Tecnologia",
         "brandLogos": [
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6b9c80f1-fef1-49be-ae45-70b77022b387/images-(2).png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/66cd07d4-3116-4db6-9424-ecd8145c7681/baixados-(3).jpeg",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/17326226-a59a-4a9c-bc24-fa41b432a5e0/images-(3)-Photoroom.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/911fe2a0-5a25-427a-a638-faea834929e3/png-transparent-chevrolet-silverado-car-chevrolet-chevy-ii-nova-chevrolet-cruze-logo-chevrolet-angle-logo-car-thumbnail.png",
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/82fb7629-e18f-4a2b-8e0b-d30c652274e1/banco-brb-1.svg",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/91ad45b6-2336-415e-8133-0f7399e86215/baixados-(4).png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/493f0482-9d77-43a0-b016-cc572f6fb6c2/Stellantis.svg.png",
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6db71b9b-def4-4cff-857e-9e6f3bc5ed7f/Logo-Gradiente.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/b797e19e-6553-4f06-9ea6-27d2419d6d58/images-(1).png"
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/5999377d-9248-4791-bdf7-3b5c18753399/png-clipart-mercedes-benz-c-class-car-mercedes-benz-s-class-mercedes-text-logo.png"
         ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/image-with-paragraph.tsx",
+        "backgroundColor": "#ffffff",
+        "description": "Você não precisa tricar de ferramenta ou integrador. Nós fazemos o trabalho pesado e entregamos leads quentinhos no seu site, CRM e Whatsapp",
+        "title": "A Leadfy se integra às soluções mais usadas no mercado.",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/884bbb65-6b81-481d-b9b2-0453ac9d6391/Captura-de-tela-2024-10-01-171253.png",
+        "cta": [
+          {
+            "text": "Faça um teste Grátis",
+            "href": "/"
+          }
+        ],
+        "ctaText": "Teste Grátis",
+        "ctaHref": "/",
+        "ctaBackgroundColor": "#daff01",
+        "ctaTextColor": "1b1b1b"
       }
     },
     {
@@ -102,26 +122,6 @@
     {
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
-        "__resolveType": "site/sections/image-with-paragraph.tsx",
-        "backgroundColor": "#ffffff",
-        "description": "Você não precisa tricar de ferramenta ou integrador. Nós fazemos o trabalho pesado e entregamos leads quentinhos no seu site, CRM e Whatsapp",
-        "title": "A Leadfy se integra às soluções mais usadas no mercado.",
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/884bbb65-6b81-481d-b9b2-0453ac9d6391/Captura-de-tela-2024-10-01-171253.png",
-        "cta": [
-          {
-            "text": "Faça um teste Grátis",
-            "href": "/"
-          }
-        ],
-        "ctaText": "Teste Grátis",
-        "ctaHref": "/",
-        "ctaBackgroundColor": "#daff01",
-        "ctaTextColor": "1b1b1b"
-      }
-    },
-    {
-      "__resolveType": "website/sections/Rendering/Lazy.tsx",
-      "section": {
         "__resolveType": "site/sections/features-leadfy.tsx",
         "buttonHref": "https://wa.me/5561982214588",
         "buttonText": "Fale com Especialista",
@@ -150,8 +150,8 @@
         "logo": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/45850fbb-c575-4505-9303-ea1e4bda3cb4/Captura-de-tela-2024-10-01-152951.png",
         "infinityLoopImage": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/d93298bb-ac52-4fc3-ba26-0fcdb08d662f/Captura-de-tela-2024-10-01-170126.png",
         "partnerLogos": [
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/1e656c1b-8311-4039-ac2e-3f9bd9115125/ADXhHGrsXLnaYJQPxu740ft0foCCfijO8cEkxPin.jpeg",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/7c3c932d-c0fb-490b-bf71-fd5f85b42d2d/logotipometabusiness-1.webp",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/a0b92aa5-e745-44af-be36-5af267d91112/ADXhHGrsXLnaYJQPxu740ft0foCCfijO8cEkxPin-Photoroom.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/0c51efa0-f913-4efd-a02a-da2a2e77d0ad/logotipometabusiness-1-Photoroom.png",
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6ac5f8c2-4758-455a-9fca-382e1682b9cb/TikTok-partner-ConversImagem.png"
         ],
         "trustMessage": "Certificados pelas maiores plataformas de mídias digitais",

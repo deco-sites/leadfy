@@ -18,6 +18,7 @@ interface Props {
    */
   subtitle?: string;
   logo?: ImageWidget;
+  checkIcon?: ImageWidget;
   features?: PlanFeature[];
   /**
    * @format color-input
@@ -37,6 +38,7 @@ export default function PlanosSection({
   title = "Nossos planos são flexíveis e aumentam suas vendas em poucas semanas",
   subtitle = "",
   logo = "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/ff6bb37e-0eab-40e1-a454-86856efc278e",
+  checkIcon = "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1818/ff6bb37e-0eab-40e1-a454-86856efc278e",
   backgroundColor = "#ffffff",
   textColor = "#333333",
   accentColor = "#ccff00",
@@ -109,16 +111,16 @@ export default function PlanosSection({
                 <tr key={index} class={index % 2 === 0 ? "bg-gray-100" : ""}>
                   <td class="py-2 px-4">{feature.name}</td>
                   <td class="text-center py-2 px-4">
-                    {feature.atracao && <span style={{ color: accentColor }}>✓</span>}
+                    {feature.atracao && <img src={checkIcon} alt="Check" class="w-4 h-4 inline-block" style={{ filter: `brightness(0) saturate(100%) invert(80%) sepia(61%) saturate(397%) hue-rotate(14deg) brightness(105%) contrast(97%)` }} />}
                   </td>
                   <td class="text-center py-2 px-4">
-                    {feature.qualificacao && <span style={{ color: accentColor }}>✓</span>}
+                    {feature.qualificacao && <img src={checkIcon} alt="Check" class="w-4 h-4 inline-block" style={{ filter: `brightness(0) saturate(100%) invert(80%) sepia(61%) saturate(397%) hue-rotate(14deg) brightness(105%) contrast(97%)` }} />}
                   </td>
                   <td class="text-center py-2 px-4">
-                    {feature.atendimento && <span style={{ color: accentColor }}>✓</span>}
+                    {feature.atendimento && <img src={checkIcon} alt="Check" class="w-4 h-4 inline-block" style={{ filter: `brightness(0) saturate(100%) invert(80%) sepia(61%) saturate(397%) hue-rotate(14deg) brightness(105%) contrast(97%)` }} />}
                   </td>
                   <td class="text-center py-2 px-4">
-                    {feature.aquisicao && <span style={{ color: accentColor }}>✓</span>}
+                    {feature.aquisicao && <img src={checkIcon} alt="Check" class="w-4 h-4 inline-block" style={{ filter: `brightness(0) saturate(100%) invert(80%) sepia(61%) saturate(397%) hue-rotate(14deg) brightness(105%) contrast(97%)` }} />}
                   </td>
                 </tr>
               ))}
