@@ -217,7 +217,9 @@
           }
         ],
         "backgroundColor": "#ffffff",
-        "accentColor": "#daff01"
+        "accentColor": "#daff01",
+        "checkIcon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/9e71c809-be15-415c-a28d-98d7295099e3/Captura_de_tela_2024-08-27_142637-removebg-preview.png",
+        "textColor": "#1b1b1b"
       }
     },
     {
