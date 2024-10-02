@@ -1,0 +1,263 @@
+{
+  "name": "Leadfy-Home",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "website/sections/Analytics/Analytics.tsx"
+      }
+    },
+    {
+      "__resolveType": "site/sections/Header.tsx",
+      "logo": {
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/2d69bd9f-53f8-4f9e-b207-c6215865c098/leadfy_black.png",
+        "alt": "Leadfy",
+        "width": 179,
+        "height": 80
+      },
+      "navItems": [
+        {
+          "label": "Soluções",
+          "openInNewTab": true
+        },
+        {
+          "label": "Planos",
+          "href": "#faq"
+        },
+        {
+          "label": "Automação de Leads",
+          "href": "#unidades"
+        },
+        {
+          "label": "Quem somos"
+        },
+        {}
+      ],
+      "cta": {
+        "href": "#contato",
+        "text": "Contato"
+      },
+      "backgroundColor": "#daff01"
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/hero-leadfy.tsx",
+        "buttonHref": "https://wa.me/5561982214588",
+        "buttonText": "Faça um teste grátis",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/e0616e9c-f18b-4c72-bc0a-1a85a6e601b7/Captura-de-tela-2024-10-01-152951.png",
+        "highlightColor": "#a40a0a",
+        "subtitle": "Turbinamos seu negócio atraindo e atendendo leads qualificados todo dia, toda hora",
+        "title": "<p>Nós trazemos os clientes, <u>você fecha mais vendas</u></p>",
+        "logo1": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/251ddb99-df4e-4a3c-bce5-243a8486aaa8/baixados-(4).png",
+        "logo2": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/4216ac0d-3d1a-4c25-8dff-63d722f5bc89/banco-brb-1.svg",
+        "logo3": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/c05ee7c3-b73d-4051-84f1-c9a94e7913c7/Logo-Gradiente.png",
+        "logo4": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/0e3bba17-817a-4ec4-9d45-9e8ba4269174/images-(1).png",
+        "logo5": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/349ce1d4-488f-44e6-bd62-7ff1c71b632f/baixados-(3).jpeg",
+        "logo6": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/1af0ea70-b3a1-4957-87e5-e67d53ac3a0c/images-(2).png",
+        "dashboardImage": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/45850fbb-c575-4505-9303-ea1e4bda3cb4/Captura-de-tela-2024-10-01-152951.png",
+        "trustText": "Grandes marcas que confiam na nossa Tecnologia",
+        "brandLogos": [
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6b9c80f1-fef1-49be-ae45-70b77022b387/images-(2).png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/66cd07d4-3116-4db6-9424-ecd8145c7681/baixados-(3).jpeg",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/82fb7629-e18f-4a2b-8e0b-d30c652274e1/banco-brb-1.svg",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/91ad45b6-2336-415e-8133-0f7399e86215/baixados-(4).png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6db71b9b-def4-4cff-857e-9e6f3bc5ed7f/Logo-Gradiente.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/b797e19e-6553-4f06-9ea6-27d2419d6d58/images-(1).png"
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/testimonials.tsx",
+        "testimonials": [
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/c46c51b8-56e2-437a-a616-5ebedc08c930/Captura-de-tela-2024-10-01-172456.png",
+            "name": "Yuri Gitahy",
+            "company": "Garage 88",
+            "testimonial": "“A Leadfy trouxe 1000 leads qualificados em um ano, aumentando nossas vendas online entre 30% e 40%. Hoje, 55% do nosso faturamento vem do digital e vamos aumentar nossa aposta.”"
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/c46c51b8-56e2-437a-a616-5ebedc08c930/Captura-de-tela-2024-10-01-172456.png",
+            "name": "Yuri Gitahy",
+            "company": "Garage 88",
+            "testimonial": "“A Leadfy trouxe 1000 leads qualificados em um ano, aumentando nossas vendas online entre 30% e 40%. Hoje, 55% do nosso faturamento vem do digital e vamos aumentar nossa aposta.”"
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/c46c51b8-56e2-437a-a616-5ebedc08c930/Captura-de-tela-2024-10-01-172456.png",
+            "name": "Yuri Gitahy",
+            "company": "Garage 88",
+            "testimonial": "“A Leadfy trouxe 1000 leads qualificados em um ano, aumentando nossas vendas online entre 30% e 40%. Hoje, 55% do nosso faturamento vem do digital e vamos aumentar nossa aposta.”"
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/c46c51b8-56e2-437a-a616-5ebedc08c930/Captura-de-tela-2024-10-01-172456.png",
+            "name": "Yuri Gitahy",
+            "company": "Garage 88",
+            "testimonial": "“A Leadfy trouxe 1000 leads qualificados em um ano, aumentando nossas vendas online entre 30% e 40%. Hoje, 55% do nosso faturamento vem do digital e vamos aumentar nossa aposta.”"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/image-with-paragraph.tsx",
+        "backgroundColor": "#ffffff",
+        "description": "Você não precisa tricar de ferramenta ou integrador. Nós fazemos o trabalho pesado e entregamos leads quentinhos no seu site, CRM e Whatsapp",
+        "title": "A Leadfy se integra às soluções mais usadas no mercado.",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/884bbb65-6b81-481d-b9b2-0453ac9d6391/Captura-de-tela-2024-10-01-171253.png",
+        "cta": [
+          {
+            "text": "Faça um teste Grátis",
+            "href": "/"
+          }
+        ],
+        "ctaText": "Teste Grátis",
+        "ctaHref": "/",
+        "ctaBackgroundColor": "#daff01",
+        "ctaTextColor": "1b1b1b"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/features-leadfy.tsx",
+        "buttonHref": "https://wa.me/5561982214588",
+        "buttonText": "Fale com Especialista",
+        "features": [
+          {
+            "title": "Economize tempo e trabalho",
+            "description": "Atualizamos seus anúncios com seu estoque em tempo real",
+            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/38af45ae-5416-4e55-b818-1e2a860fef7b/clock.png"
+          },
+          {
+            "title": "Otimize seus resultados",
+            "description": "Melhoramos a performance das suas campanhas de aquisição e remarketing",
+            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/6c168644-eade-42c6-814f-f37bca1292dc/filter-add.png"
+          },
+          {
+            "title": "Seja mais competitivo",
+            "description": "Traga as estratégias dos grandes portais para o site do seu negócio",
+            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/1e6eaf20-f904-44ff-8ffe-4ec42d48f5f6/cup.png"
+          },
+          {
+            "title": "Venda fora do horário comercial",
+            "description": "Nosso módulo de atendimento 24×7 não deixa você perder nenhum cliente",
+            "icon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-sell/5543d561-ec28-40fd-8e4d-cce4ff4cbcd5/message-add.png"
+          }
+        ],
+        "logo": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/45850fbb-c575-4505-9303-ea1e4bda3cb4/Captura-de-tela-2024-10-01-152951.png",
+        "infinityLoopImage": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/d93298bb-ac52-4fc3-ba26-0fcdb08d662f/Captura-de-tela-2024-10-01-170126.png",
+        "partnerLogos": [
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/1e656c1b-8311-4039-ac2e-3f9bd9115125/ADXhHGrsXLnaYJQPxu740ft0foCCfijO8cEkxPin.jpeg",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/7c3c932d-c0fb-490b-bf71-fd5f85b42d2d/logotipometabusiness-1.webp",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6ac5f8c2-4758-455a-9fca-382e1682b9cb/TikTok-partner-ConversImagem.png"
+        ],
+        "trustMessage": "Certificados pelas maiores plataformas de mídias digitais",
+        "buttonUrl": "/",
+        "subtitle": "Nossa tecnologia aumenta seu faturamento, atende seu cliente em amplia seu branding (com um investimento menor que você imagina)",
+        "mainTitle": "<p>A Leadfy complementa sua estratégia de marketing e vendas na nova jornada digital de compra.</p>"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/planos.tsx",
+        "logo": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/b971f042-d539-4565-8996-7121bcac0346/Group-48095896.png",
+        "features": [
+          {
+            "atracao": true,
+            "qualificacao": true,
+            "atendimento": true,
+            "aquisicao": true,
+            "name": "Gestor Automático"
+          },
+          {
+            "atracao": true,
+            "qualificacao": true,
+            "atendimento": true,
+            "aquisicao": true,
+            "name": "Gestor Automático"
+          },
+          {
+            "atracao": true,
+            "qualificacao": true,
+            "atendimento": true,
+            "aquisicao": true,
+            "name": "Gestor Automático"
+          },
+          {
+            "atracao": true,
+            "qualificacao": true,
+            "atendimento": true,
+            "aquisicao": true,
+            "name": "Gestor Automático"
+          },
+          {
+            "atracao": true,
+            "qualificacao": true,
+            "atendimento": true,
+            "aquisicao": true,
+            "name": "Gestor Automático"
+          },
+          {
+            "atracao": true,
+            "qualificacao": true,
+            "atendimento": true,
+            "aquisicao": true,
+            "name": "Gestor Automático"
+          },
+          {
+            "atracao": true,
+            "qualificacao": true,
+            "atendimento": true,
+            "aquisicao": true,
+            "name": "Gestor Automático"
+          }
+        ],
+        "backgroundColor": "#ffffff",
+        "accentColor": "#daff01"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/blog.tsx",
+        "posts": [
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/ebd28e3d-d6cf-47a4-856c-b52695f56607/blogLeadfy-Blog-VendaOnline-20240927-1536x864.jpg",
+            "date": "01/10/2024",
+            "title": "Venda de Veículos: quais são as tendências em 2024",
+            "description": "O mercado automotivo está mudando rápido. Quer saber como as plataformas digitais estão revolucionando a compra e venda de veículos? Descubra como a tecnologia pode transformar a forma como você gerencia seu negócio!"
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/ebd28e3d-d6cf-47a4-856c-b52695f56607/blogLeadfy-Blog-VendaOnline-20240927-1536x864.jpg",
+            "date": "01/10/2024",
+            "title": "Venda de Veículos: quais são as tendências em 2024",
+            "description": "O mercado automotivo está mudando rápido. Quer saber como as plataformas digitais estão revolucionando a compra e venda de veículos? Descubra como a tecnologia pode transformar a forma como você gerencia seu negócio!"
+          },
+          {
+            "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/ebd28e3d-d6cf-47a4-856c-b52695f56607/blogLeadfy-Blog-VendaOnline-20240927-1536x864.jpg",
+            "date": "01/10/2024",
+            "title": "Venda de Veículos: quais são as tendências em 2024",
+            "description": "O mercado automotivo está mudando rápido. Quer saber como as plataformas digitais estão revolucionando a compra e venda de veículos? Descubra como a tecnologia pode transformar a forma como você gerencia seu negócio!"
+          }
+        ]
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/Footer.tsx",
+        "href": "/",
+        "text": "© 2024. Leadfy. Todos os Direitos Reservados.",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/00cb8e4c-dae1-4ea8-b0d0-45abbfa054ea/Factor-L.png",
+        "alt": "GarageCar Veiculos",
+        "width": 64,
+        "height": 64
+      }
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx"
+}

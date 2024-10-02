@@ -1,0 +1,39 @@
+{
+  "__resolveType": "site/sections/Theme/Theme.tsx",
+  "colorScheme": "any",
+  "buttonStyle": {
+    "--border-btn": "1px",
+    "--rounded-btn": "0.2rem",
+    "--btn-focus-scale": "0.9",
+    "--animation-btn": "0.25s"
+  },
+  "otherStyles": {
+    "--rounded-box": "1rem",
+    "--rounded-badge": "1.9rem",
+    "--animation-input": "0.2s",
+    "--tab-border": "1px",
+    "--tab-radius": "0.5rem"
+  },
+  "mode": "light",
+  "mainColors": {
+    "primary": "#9db229",
+    "secondary": "#2F2E2E"
+  },
+  "complementaryColors": {
+    "primary-content": "#FFFFFF",
+    "secondary-content": "#FFFFFF"
+  },
+  "font": {
+    "__resolveType": "website/loaders/fonts/googleFonts.ts",
+    "fonts": [
+      {
+        "variations": [],
+        "family": "Archivo"
+      },
+      {
+        "variations": [],
+        "family": "Public Sans"
+      }
+    ]
+  }
+}

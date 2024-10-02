@@ -1,0 +1,33 @@
+{
+  "seo": {
+    "type": "website",
+    "jsonLDs": [],
+    "noIndexing": false,
+    "description": "Nós trazemos clientes, você fecha as vendas",
+    "title": "Leadfy",
+    "favicon": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/00cb8e4c-dae1-4ea8-b0d0-45abbfa054ea/Factor-L.png",
+    "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/00cb8e4c-dae1-4ea8-b0d0-45abbfa054ea/Factor-L.png",
+    "titleTemplate": "Leadfy"
+  },
+  "global": [
+    {
+      "__resolveType": "htmx/sections/htmx.tsx"
+    }
+  ],
+  "routes": [
+    {
+      "__resolveType": "website/loaders/pages.ts"
+    },
+    {
+      "__resolveType": "website/loaders/redirects.ts"
+    }
+  ],
+  "caching": {
+    "directives": []
+  },
+  "__resolveType": "site/apps/site.ts",
+  "firstByteThresholdMS": true,
+  "theme": {
+    "__resolveType": "Leadfy"
+  }
+}
