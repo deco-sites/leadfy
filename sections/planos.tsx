@@ -33,7 +33,6 @@ interface Props {
    */
   accentColor?: string;
 }
-
 export default function PlanosSection({
   title = "Nossos planos são flexíveis e aumentam suas vendas em poucas semanas",
   subtitle = "",
@@ -95,7 +94,7 @@ export default function PlanosSection({
         <img src={logo} alt="Leadfy Logo" class="w-32 mb-8" />
         <h2 class="text-3xl font-bold mb-8 text-center">{title}</h2>
         {subtitle && <p class="text-xl mb-12 text-center">{subtitle}</p>}
-        
+
         <div class="overflow-x-auto">
           <table class="w-full">
             <thead>
@@ -126,19 +125,6 @@ export default function PlanosSection({
               ))}
             </tbody>
           </table>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
-          {columns.map((column) => (
-            <div key={column} class="text-center">
-              <button
-                style={{ backgroundColor: accentColor, color: textColor }}
-                class="w-full py-2 px-4 rounded font-bold hover:opacity-90 transition-opacity"
-              >
-                Contratar
-              </button>
-            </div>
-          ))}
         </div>
       </div>
     </section>
