@@ -32,7 +32,20 @@ interface Props {
    * @format color-input
    */
   accentColor?: string;
+  /**
+   * @format color-input
+   */
+  buttonBackgroundColor?: string;
+  /**
+   * @format color-input
+   */
+  buttonTextColor?: string;
+  /**
+   * @format url-input
+   */
+  buttonLink?: string;
 }
+
 export default function PlanosSection({
   title = "Nossos planos são flexíveis e aumentam suas vendas em poucas semanas",
   subtitle = "",
@@ -41,6 +54,9 @@ export default function PlanosSection({
   backgroundColor = "#ffffff",
   textColor = "#333333",
   accentColor = "#ccff00",
+  buttonBackgroundColor = "#000000", // Default background color for button
+  buttonTextColor = "#ffffff", // Default text color for button
+  buttonLink = "#", // Default link
   features = [
     {
       name: "Gestor automático de tráfego",
@@ -125,6 +141,17 @@ export default function PlanosSection({
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Botão editável */}
+        <div class="text-center mt-8">
+          <a
+            href={buttonLink}
+            style={{ backgroundColor: buttonBackgroundColor, color: buttonTextColor }}
+            class="py-3 px-6 rounded font-bold hover:opacity-90 transition-opacity"
+          >
+            Saiba Mais
+          </a>
         </div>
       </div>
     </section>
