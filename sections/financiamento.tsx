@@ -1,25 +1,10 @@
-import { useSignal, useComputed } from "@preact/signals";
+import React, { useState } from 'react';
 
 interface Props {
-  /**
-   * @format rich-text
-   */
   title?: string;
-  /**
-   * @format textarea
-   */
   description?: string;
-  /**
-   * @format color-input
-   */
   primaryColor?: string;
-  /**
-   * @format color-input
-   */
   secondaryColor?: string;
-  /**
-   * @format rich-text
-   */
   buttonText?: string;
 }
 
@@ -30,63 +15,71 @@ export default function FinancingSimulator({
   secondaryColor = "#E2E8F0",
   buttonText = "Simulate Financing",
 }: Props) {
-  const vehicleValue = useSignal("");
-  const downPayment = useSignal("");
-  const installments = useSignal("12");
-  const monthlyPayment = useSignal<number | null>(null);
-  const showResult = useSignal(false);
+  const [vehicleValue, setVehicleValue] = useState("");
+  const [downPayment, setDownPayment] = useState("");
+  const [installments, setInstallments] = useState("12");
+  const [monthlyPayment, setMonthlyPayment] = useState<number | null>(null);
+  const [showResult, setShowResult] = useState(false);
 
-  const handleSubmit = (e: Event) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const principal = Number(vehicleValue.value) - Number(downPayment.value);
-    const rate = 0.0199;
-    const periods = Number(installments.value);
+    const principal = Number(vehicleValue) - Number(downPayment);
+    const rate = 0.0199; // 1.99% monthly interest rate
+    const periods = Number(installments);
 
     if (principal > 0 && periods > 0) {
       const payment = (principal * rate * Math.pow(1 + rate, periods)) / (Math.pow(1 + rate, periods) - 1);
-      monthlyPayment.value = Number(payment.toFixed(2));
+      setMonthlyPayment(Number(payment.toFixed(2)));
     } else {
-      monthlyPayment.value = null;
+      setMonthlyPayment(null);
     }
-    showResult.value = true;
+    setShowResult(true);
   };
 
   return (
-    <div class="max-w-md mx-auto p-6 rounded-lg shadow-lg" style={{ backgroundColor: secondaryColor }}>
-      <h2 class="text-2xl font-bold mb-4" style={{ color: primaryColor }}>{title}</h2>
-      <p class="mb-6" style={{ color: primaryColor }}>{description}</p>
-      
+    <div className="max-w-md mx-auto p-6 rounded-lg shadow-lg" style={{ backgroundColor: secondaryColor }}>
+      <h2 className="text-2xl font-bold mb-4" style={{ color: primaryColor }}>{title}</h2>
+      <p className="mb-6" style={{ color: primaryColor }}>{description}</p>
+
       <form onSubmit={handleSubmit}>
-        <div class="mb-4">
-          <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Vehicle Value (R$)</label>
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1" style={{ color: primaryColor }}>
+            Vehicle Value (R$)
+          </label>
           <input
             type="number"
-            value={vehicleValue.value}
-            onInput={(e) => vehicleValue.value = (e.target as HTMLInputElement).value}
-            class="w-full px-3 py-2 border rounded-md"
+            value={vehicleValue}
+            onChange={(e) => setVehicleValue(e.target.value)}
+            className="w-full px-3 py-2 border rounded-md"
             style={{ borderColor: primaryColor }}
             required
+            min="0"
           />
         </div>
-        
-        <div class="mb-4">
-          <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Down Payment (R$)</label>
+
+        <div className="mb-4">
+          <label className="block text-sm font-medium mb-1" style={{ color: primaryColor }}>
+            Down Payment (R$)
+          </label>
           <input
             type="number"
-            value={downPayment.value}
-            onInput={(e) => downPayment.value = (e.target as HTMLInputElement).value}
-            class="w-full px-3 py-2 border rounded-md"
+            value={downPayment}
+            onChange={(e) => setDownPayment(e.target.value)}
+            className="w-full px-3 py-2 border rounded-md"
             style={{ borderColor: primaryColor }}
             required
+            min="0"
           />
         </div>
-        
-        <div class="mb-6">
-          <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Number of Installments</label>
+
+        <div className="mb-6">
+          <label className="block text-sm font-medium mb-1" style={{ color: primaryColor }}>
+            Number of Installments
+          </label>
           <select
-            value={installments.value}
-            onChange={(e) => installments.value = (e.target as HTMLSelectElement).value}
-            class="w-full px-3 py-2 border rounded-md"
+            value={installments}
+            onChange={(e) => setInstallments(e.target.value)}
+            className="w-full px-3 py-2 border rounded-md"
             style={{ borderColor: primaryColor }}
             required
           >
@@ -96,29 +89,27 @@ export default function FinancingSimulator({
             <option value="48">48 months</option>
           </select>
         </div>
-        
+
         <button
           type="submit"
-          class="w-full py-3 px-4 rounded-md text-white font-bold transition-colors duration-300"
+          className="w-full py-3 px-4 rounded-md text-white font-bold transition-colors duration-300 hover:opacity-90"
           style={{ backgroundColor: primaryColor }}
         >
           {buttonText}
         </button>
       </form>
-      
-      {showResult.value && monthlyPayment.value !== null && (
-        <div class="mt-6 text-center">
-          <h3 class="text-xl font-bold mb-2" style={{ color: primaryColor }}>Monthly Payment:</h3>
-          <p class="text-2xl font-bold" style={{ color: primaryColor }}>
-            R$ {monthlyPayment.value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+      {showResult && monthlyPayment !== null && (
+        <div className="mt-6 text-center">
+          <h3 className="text-xl font-bold mb-2" style={{ color: primaryColor }}>Monthly Payment:</h3>
+          <p className="text-2xl font-bold" style={{ color: primaryColor }}>
+            R$ {monthlyPayment.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
         </div>
       )}
-      
-      {showResult.value && monthlyPayment.value === null && (
-        <div class="mt-6 text-center">
-          <h3 class="text-xl font-bold mb-2" style={{ color: primaryColor }}>Invalid Input</h3>
-          <p class="text-lg" style={{ color: primaryColor }}>Please check your input values and try again.</p>
+      {showResult && monthlyPayment === null && (
+        <div className="mt-6 text-center">
+          <h3 className="text-xl font-bold mb-2" style={{ color: primaryColor }}>Invalid Input</h3>
+          <p className="text-lg" style={{ color: primaryColor }}>Please check your input values and try again.</p>
         </div>
       )}
     </div>
