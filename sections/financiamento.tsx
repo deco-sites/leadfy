@@ -1,5 +1,4 @@
 import { useSignal } from "@preact/signals";
-import { useCallback } from "preact/hooks";
 
 interface Props {
   /**
@@ -31,14 +30,14 @@ export default function FinancingSimulator({
   const installments = useSignal("12");
   const monthlyPayment = useSignal<number | null>(null);
 
-  const calculateMonthlyPayment = useCallback(() => {
+  const calculateMonthlyPayment = () => {
     const principal = Number(vehicleValue.value) - Number(downPayment.value);
-    const rate = 0.0199; // 1.
+    const rate = 0.0199; // 1.99 monthly interest rate
     const periods = Number(installments.value);
 
     const payment = (principal * rate * Math.pow(1 + rate, periods)) / (Math.pow(1 + rate, periods) - 1);
     monthlyPayment.value = Number(payment.toFixed(2));
-  }, [vehicleValue.value, downPayment.value, installments.value]);
+  };
 
   return (
     <div class="max-w-md mx-auto p-6 rounded-lg shadow-lg" style={{ backgroundColor: secondaryColor }}>
@@ -83,7 +82,7 @@ export default function FinancingSimulator({
       </div>
       
       <button
-        onClick={calculateMonthlyPayment}
+        onClick={() => calculateMonthlyPayment()}
         class="w-full py-2 px-4 rounded-md text-white font-medium"
         style={{ backgroundColor: primaryColor }}
       >
