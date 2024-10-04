@@ -1,4 +1,4 @@
-import { useSignal } from "@preact/signals";
+import { useSignal, useComputed } from "@preact/signals";
 
 interface Props {
   /**
@@ -34,6 +34,7 @@ export default function FinancingSimulator({
   const downPayment = useSignal("");
   const installments = useSignal("12");
   const monthlyPayment = useSignal<number | null>(null);
+  const showResult = useSignal(false);
 
   const handleSubmit = (e: Event) => {
     e.preventDefault();
@@ -47,6 +48,7 @@ export default function FinancingSimulator({
     } else {
       monthlyPayment.value = null;
     }
+    showResult.value = true;
   };
 
   return (
@@ -104,12 +106,19 @@ export default function FinancingSimulator({
         </button>
       </form>
       
-      {monthlyPayment.value !== null && (
+      {showResult.value && monthlyPayment.value !== null && (
         <div class="mt-6 text-center">
           <h3 class="text-xl font-bold mb-2" style={{ color: primaryColor }}>Monthly Payment:</h3>
           <p class="text-2xl font-bold" style={{ color: primaryColor }}>
             R$ {monthlyPayment.value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
+        </div>
+      )}
+      
+      {showResult.value && monthlyPayment.value === null && (
+        <div class="mt-6 text-center">
+          <h3 class="text-xl font-bold mb-2" style={{ color: primaryColor }}>Invalid Input</h3>
+          <p class="text-lg" style={{ color: primaryColor }}>Please check your input values and try again.</p>
         </div>
       )}
     </div>
