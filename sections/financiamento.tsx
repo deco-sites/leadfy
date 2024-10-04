@@ -1,4 +1,4 @@
-import { useState } from "preact/hooks";
+import { useSignal, useComputed } from "@preact/signals";
 
 interface Props {
   /**
@@ -25,19 +25,21 @@ export default function FinancingSimulator({
   primaryColor = "#4A5568",
   secondaryColor = "#E2E8F0",
 }: Props) {
-  const [vehicleValue, setVehicleValue] = useState("");
-  const [downPayment, setDownPayment] = useState("");
-  const [installments, setInstallments] = useState("12");
-  const [monthlyPayment, setMonthlyPayment] = useState<number | null>(null);
+  const vehicleValue = useSignal("");
+  const downPayment = useSignal("");
+  const installments = useSignal("12");
 
-  const calculateMonthlyPayment = () => {
-    const principal = Number(vehicleValue) - Number(downPayment);
-    const rate = 0.0199; // 1.99 monthly interest rate
-    const periods = Number(installments);
+  const monthlyPayment = useComputed(() => {
+    const principal = Number(vehicleValue.value) - Number(downPayment.value);
+    const rate = 0.0199;
+    const periods = Number(installments.value);
 
-    const payment = (principal * rate * Math.pow(1 + rate, periods)) / (Math.pow(1 + rate, periods) - 1);
-    setMonthlyPayment(Number(payment.toFixed(2)));
-  };
+    if (principal > 0 && periods > 0) {
+      const payment = (principal * rate * Math.pow(1 + rate, periods)) / (Math.pow(1 + rate, periods) - 1);
+      return Number(payment.toFixed(2));
+    }
+    return null;
+  });
 
   return (
     <div class="max-w-md mx-auto p-6 rounded-lg shadow-lg" style={{ backgroundColor: secondaryColor }}>
@@ -48,10 +50,11 @@ export default function FinancingSimulator({
         <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Vehicle Value (R$)</label>
         <input
           type="number"
-          value={vehicleValue}
-          onInput={(e) => setVehicleValue((e.target as HTMLInputElement).value)}
+          value={vehicleValue.value}
+          onInput={(e) => vehicleValue.value = (e.target as HTMLInputElement).value}
           class="w-full px-3 py-2 border rounded-md"
           style={{ borderColor: primaryColor }}
+          required
         />
       </div>
       
@@ -59,20 +62,22 @@ export default function FinancingSimulator({
         <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Down Payment (R$)</label>
         <input
           type="number"
-          value={downPayment}
-          onInput={(e) => setDownPayment((e.target as HTMLInputElement).value)}
+          value={downPayment.value}
+          onInput={(e) => downPayment.value = (e.target as HTMLInputElement).value}
           class="w-full px-3 py-2 border rounded-md"
           style={{ borderColor: primaryColor }}
+          required
         />
       </div>
       
       <div class="mb-4">
         <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Number of Installments</label>
         <select
-          value={installments}
-          onChange={(e) => setInstallments((e.target as HTMLSelectElement).value)}
+          value={installments.value}
+          onChange={(e) => installments.value = (e.target as HTMLSelectElement).value}
           class="w-full px-3 py-2 border rounded-md"
           style={{ borderColor: primaryColor }}
+          required
         >
           <option value="12">12 months</option>
           <option value="24">24 months</option>
@@ -81,19 +86,11 @@ export default function FinancingSimulator({
         </select>
       </div>
       
-      <button
-        onClick={calculateMonthlyPayment}
-        class="w-full py-2 px-4 rounded-md text-white font-medium"
-        style={{ backgroundColor: primaryColor }}
-      >
-        Simulate
-      </button>
-      
-      {monthlyPayment !== null && (
+      {monthlyPayment.value !== null && (
         <div class="mt-6 text-center">
           <h3 class="text-xl font-bold mb-2" style={{ color: primaryColor }}>Monthly Payment:</h3>
           <p class="text-2xl font-bold" style={{ color: primaryColor }}>
-            R$ {monthlyPayment.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            R$ {monthlyPayment.value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
         </div>
       )}
