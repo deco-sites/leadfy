@@ -1,4 +1,4 @@
-import { useSignal } from "@preact/signals";
+import { useState } from "preact/hooks";
 
 interface Props {
   /**
@@ -25,18 +25,18 @@ export default function FinancingSimulator({
   primaryColor = "#4A5568",
   secondaryColor = "#E2E8F0",
 }: Props) {
-  const vehicleValue = useSignal("");
-  const downPayment = useSignal("");
-  const installments = useSignal("12");
-  const monthlyPayment = useSignal<number | null>(null);
+  const [vehicleValue, setVehicleValue] = useState("");
+  const [downPayment, setDownPayment] = useState("");
+  const [installments, setInstallments] = useState("12");
+  const [monthlyPayment, setMonthlyPayment] = useState<number | null>(null);
 
   const calculateMonthlyPayment = () => {
-    const principal = Number(vehicleValue.value) - Number(downPayment.value);
+    const principal = Number(vehicleValue) - Number(downPayment);
     const rate = 0.0199; // 1.99 monthly interest rate
-    const periods = Number(installments.value);
+    const periods = Number(installments);
 
     const payment = (principal * rate * Math.pow(1 + rate, periods)) / (Math.pow(1 + rate, periods) - 1);
-    monthlyPayment.value = Number(payment.toFixed(2));
+    setMonthlyPayment(Number(payment.toFixed(2)));
   };
 
   return (
@@ -48,8 +48,8 @@ export default function FinancingSimulator({
         <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Vehicle Value (R$)</label>
         <input
           type="number"
-          value={vehicleValue.value}
-          onInput={(e) => vehicleValue.value = (e.target as HTMLInputElement).value}
+          value={vehicleValue}
+          onInput={(e) => setVehicleValue((e.target as HTMLInputElement).value)}
           class="w-full px-3 py-2 border rounded-md"
           style={{ borderColor: primaryColor }}
         />
@@ -59,8 +59,8 @@ export default function FinancingSimulator({
         <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Down Payment (R$)</label>
         <input
           type="number"
-          value={downPayment.value}
-          onInput={(e) => downPayment.value = (e.target as HTMLInputElement).value}
+          value={downPayment}
+          onInput={(e) => setDownPayment((e.target as HTMLInputElement).value)}
           class="w-full px-3 py-2 border rounded-md"
           style={{ borderColor: primaryColor }}
         />
@@ -69,8 +69,8 @@ export default function FinancingSimulator({
       <div class="mb-4">
         <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Number of Installments</label>
         <select
-          value={installments.value}
-          onChange={(e) => installments.value = (e.target as HTMLSelectElement).value}
+          value={installments}
+          onChange={(e) => setInstallments((e.target as HTMLSelectElement).value)}
           class="w-full px-3 py-2 border rounded-md"
           style={{ borderColor: primaryColor }}
         >
@@ -82,18 +82,18 @@ export default function FinancingSimulator({
       </div>
       
       <button
-        onClick={() => calculateMonthlyPayment()}
+        onClick={calculateMonthlyPayment}
         class="w-full py-2 px-4 rounded-md text-white font-medium"
         style={{ backgroundColor: primaryColor }}
       >
         Simulate
       </button>
       
-      {monthlyPayment.value !== null && (
+      {monthlyPayment !== null && (
         <div class="mt-6 text-center">
           <h3 class="text-xl font-bold mb-2" style={{ color: primaryColor }}>Monthly Payment:</h3>
           <p class="text-2xl font-bold" style={{ color: primaryColor }}>
-            R$ {monthlyPayment.value.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+            R$ {monthlyPayment.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </p>
         </div>
       )}
