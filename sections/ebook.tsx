@@ -38,15 +38,20 @@ export default function EbookSection({
           />
         </div>
         <div className="md:w-1/2">
-          <h2 className="text-3xl font-bold mb-4">{title}</h2>
-          <div className="text-gray-600 mb-6">{description}</div>
+          <h2
+            className="text-3xl font-bold mb-4"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+          <div
+            className="text-gray-600 mb-6"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
           <a
             href={downloadLink}
             download
             className="btn btn-primary"
-          >
-            {buttonText}
-          </a>
+            dangerouslySetInnerHTML={{ __html: buttonText }}
+          />
         </div>
       </div>
     </section>

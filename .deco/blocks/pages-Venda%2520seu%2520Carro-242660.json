@@ -265,7 +265,8 @@
         "__resolveType": "site/sections/ebook.tsx",
         "title": "<h1 style=\"text-align: start\"><strong><span style=\"font-size: 34px\">Venda mais com atendimento 24x7</span></strong></h1>",
         "description": "Descubra como transformar seu site em uma máquina de vendas.",
-        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/646bcb37-b4ec-44b5-919b-306530da404a/36734tl1g9i.png"
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/646bcb37-b4ec-44b5-919b-306530da404a/36734tl1g9i.png",
+        "downloadLink": "https://info.leadfy.me/ebook-atendimento"
       }
     },
     {
