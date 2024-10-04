@@ -59,11 +59,9 @@
         "trustText": "Grandes marcas que confiam na nossa Tecnologia",
         "brandLogos": [
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/17326226-a59a-4a9c-bc24-fa41b432a5e0/images-(3)-Photoroom.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/911fe2a0-5a25-427a-a638-faea834929e3/png-transparent-chevrolet-silverado-car-chevrolet-chevy-ii-nova-chevrolet-cruze-logo-chevrolet-angle-logo-car-thumbnail.png",
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/82fb7629-e18f-4a2b-8e0b-d30c652274e1/banco-brb-1.svg",
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/493f0482-9d77-43a0-b016-cc572f6fb6c2/Stellantis.svg.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6db71b9b-def4-4cff-857e-9e6f3bc5ed7f/Logo-Gradiente.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/5999377d-9248-4791-bdf7-3b5c18753399/png-clipart-mercedes-benz-c-class-car-mercedes-benz-s-class-mercedes-text-logo.png"
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6db71b9b-def4-4cff-857e-9e6f3bc5ed7f/Logo-Gradiente.png"
         ]
       }
     },
@@ -155,7 +153,8 @@
         "partnerLogos": [
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/a0b92aa5-e745-44af-be36-5af267d91112/ADXhHGrsXLnaYJQPxu740ft0foCCfijO8cEkxPin-Photoroom.png",
           "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/0c51efa0-f913-4efd-a02a-da2a2e77d0ad/logotipometabusiness-1-Photoroom.png",
-          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6ac5f8c2-4758-455a-9fca-382e1682b9cb/TikTok-partner-ConversImagem.png"
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/6ac5f8c2-4758-455a-9fca-382e1682b9cb/TikTok-partner-ConversImagem.png",
+          "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/493f0482-9d77-43a0-b016-cc572f6fb6c2/Stellantis.svg.png"
         ],
         "trustMessage": "Certificados pelas maiores plataformas de mídias digitais",
         "buttonUrl": "https://wa.me/5561982214588",
@@ -218,6 +217,10 @@
             "atendimento": true,
             "aquisicao": true,
             "name": "Gestor Automático"
+          },
+          {
+            "name": "Aluguel de anão",
+            "aquisicao": true
           }
         ],
         "backgroundColor": "#ffffff",
@@ -254,6 +257,15 @@
           }
         ],
         "backgroundColor": "#f8f8f8"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/ebook.tsx",
+        "title": "<h1 style=\"text-align: start\"><strong><span style=\"font-size: 34px\">Venda mais com atendimento 24x7</span></strong></h1>",
+        "description": "Descubra como transformar seu site em uma máquina de vendas.",
+        "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/646bcb37-b4ec-44b5-919b-306530da404a/36734tl1g9i.png"
       }
     },
     {
