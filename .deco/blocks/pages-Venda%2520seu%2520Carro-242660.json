@@ -236,6 +236,7 @@
       "__resolveType": "website/sections/Rendering/Lazy.tsx",
       "section": {
         "__resolveType": "site/sections/blog.tsx",
+        "backgroundColor": "#f8f8f8",
         "posts": [
           {
             "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy-home/ebd28e3d-d6cf-47a4-856c-b52695f56607/blogLeadfy-Blog-VendaOnline-20240927-1536x864.jpg",
@@ -255,8 +256,7 @@
             "title": "Venda de Veículos: quais são as tendências em 2024",
             "description": "O mercado automotivo está mudando rápido. Quer saber como as plataformas digitais estão revolucionando a compra e venda de veículos? Descubra como a tecnologia pode transformar a forma como você gerencia seu negócio!"
           }
-        ],
-        "backgroundColor": "#f8f8f8"
+        ]
       }
     },
     {
@@ -267,6 +267,14 @@
         "description": "Descubra como transformar seu site em uma máquina de vendas.",
         "image": "https://deco-sites-assets.s3.sa-east-1.amazonaws.com/leadfy/646bcb37-b4ec-44b5-919b-306530da404a/36734tl1g9i.png",
         "downloadLink": "https://info.leadfy.me/ebook-atendimento"
+      }
+    },
+    {
+      "__resolveType": "website/sections/Rendering/Lazy.tsx",
+      "section": {
+        "__resolveType": "site/sections/financiamento.tsx",
+        "primaryColor": "#1b1b1b",
+        "secondaryColor": "#daff01"
       }
     },
     {
