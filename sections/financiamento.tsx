@@ -1,4 +1,4 @@
-import { useSignal, useComputed } from "@preact/signals";
+import { useSignal } from "@preact/signals";
 
 interface Props {
   /**
@@ -17,6 +17,10 @@ interface Props {
    * @format color-input
    */
   secondaryColor?: string;
+  /**
+   * @format rich-text
+   */
+  buttonText?: string;
 }
 
 export default function FinancingSimulator({
@@ -24,67 +28,81 @@ export default function FinancingSimulator({
   description = "Calculate your monthly payments for vehicle financing",
   primaryColor = "#4A5568",
   secondaryColor = "#E2E8F0",
+  buttonText = "Simulate Financing",
 }: Props) {
   const vehicleValue = useSignal("");
   const downPayment = useSignal("");
   const installments = useSignal("12");
+  const monthlyPayment = useSignal<number | null>(null);
 
-  const monthlyPayment = useComputed(() => {
+  const handleSubmit = (e: Event) => {
+    e.preventDefault();
     const principal = Number(vehicleValue.value) - Number(downPayment.value);
     const rate = 0.0199;
     const periods = Number(installments.value);
 
     if (principal > 0 && periods > 0) {
       const payment = (principal * rate * Math.pow(1 + rate, periods)) / (Math.pow(1 + rate, periods) - 1);
-      return Number(payment.toFixed(2));
+      monthlyPayment.value = Number(payment.toFixed(2));
+    } else {
+      monthlyPayment.value = null;
     }
-    return null;
-  });
+  };
 
   return (
     <div class="max-w-md mx-auto p-6 rounded-lg shadow-lg" style={{ backgroundColor: secondaryColor }}>
       <h2 class="text-2xl font-bold mb-4" style={{ color: primaryColor }}>{title}</h2>
       <p class="mb-6" style={{ color: primaryColor }}>{description}</p>
       
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Vehicle Value (R$)</label>
-        <input
-          type="number"
-          value={vehicleValue.value}
-          onInput={(e) => vehicleValue.value = (e.target as HTMLInputElement).value}
-          class="w-full px-3 py-2 border rounded-md"
-          style={{ borderColor: primaryColor }}
-          required
-        />
-      </div>
-      
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Down Payment (R$)</label>
-        <input
-          type="number"
-          value={downPayment.value}
-          onInput={(e) => downPayment.value = (e.target as HTMLInputElement).value}
-          class="w-full px-3 py-2 border rounded-md"
-          style={{ borderColor: primaryColor }}
-          required
-        />
-      </div>
-      
-      <div class="mb-4">
-        <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Number of Installments</label>
-        <select
-          value={installments.value}
-          onChange={(e) => installments.value = (e.target as HTMLSelectElement).value}
-          class="w-full px-3 py-2 border rounded-md"
-          style={{ borderColor: primaryColor }}
-          required
+      <form onSubmit={handleSubmit}>
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Vehicle Value (R$)</label>
+          <input
+            type="number"
+            value={vehicleValue.value}
+            onInput={(e) => vehicleValue.value = (e.target as HTMLInputElement).value}
+            class="w-full px-3 py-2 border rounded-md"
+            style={{ borderColor: primaryColor }}
+            required
+          />
+        </div>
+        
+        <div class="mb-4">
+          <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Down Payment (R$)</label>
+          <input
+            type="number"
+            value={downPayment.value}
+            onInput={(e) => downPayment.value = (e.target as HTMLInputElement).value}
+            class="w-full px-3 py-2 border rounded-md"
+            style={{ borderColor: primaryColor }}
+            required
+          />
+        </div>
+        
+        <div class="mb-6">
+          <label class="block text-sm font-medium mb-1" style={{ color: primaryColor }}>Number of Installments</label>
+          <select
+            value={installments.value}
+            onChange={(e) => installments.value = (e.target as HTMLSelectElement).value}
+            class="w-full px-3 py-2 border rounded-md"
+            style={{ borderColor: primaryColor }}
+            required
+          >
+            <option value="12">12 months</option>
+            <option value="24">24 months</option>
+            <option value="36">36 months</option>
+            <option value="48">48 months</option>
+          </select>
+        </div>
+        
+        <button
+          type="submit"
+          class="w-full py-3 px-4 rounded-md text-white font-bold transition-colors duration-300"
+          style={{ backgroundColor: primaryColor }}
         >
-          <option value="12">12 months</option>
-          <option value="24">24 months</option>
-          <option value="36">36 months</option>
-          <option value="48">48 months</option>
-        </select>
-      </div>
+          {buttonText}
+        </button>
+      </form>
       
       {monthlyPayment.value !== null && (
         <div class="mt-6 text-center">
